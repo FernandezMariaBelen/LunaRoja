@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Roja - Calcula tu impacto</title>
+    <link rel="icon" type="image/jpg" href="../assets/logo.png"/>
+    <!-- LINK BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- LIBRERIA SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- LINK CSS PROPIA-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header id="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png" alt="Logo luna roja"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Incio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="conoce-tus-opciones.html" type="button"
+                                id="dropdownMenuBoton" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true">
+                                Conoce tus opciones
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuBoton">
+                                <li><a class="dropdown-item" href="copa-menstrual.html">Copa menstrual</a></li>
+                                <li><a class="dropdown-item" href="ropa-interior.html">Ropa interior menstrual</a></li>
+                                <li><a class="dropdown-item"
+                                        href="toallitas-y-protectores-diarios-reutilizables.html">Toallitas y
+                                        protectores</a></li>
+                                <li><a class="dropdown-item" href="directorio.html">Directorio</a></li>
+
+                            </ul>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="calcula-tu-impacto.html">Calcula
+                                tu impacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="consejerias.html">Consejerias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="sobre-nosotras.html">Sobre
+                                nosotras</a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="calculadora">
+
+        <h1 class="calcula">Calcula tu impacto</h1>
+
+        <h2>Calculadora de impacto ambiental</h2>
+
+        <p> Podés cuantificar cuál es el impacto que tienen los productos de gestión menstrual de 1 solo uso en el medio
+            ambiente. Te invitamos a que realices el test y tomes una posición activa.
+            Animate a ser parte del cambio utilizando productos de gestión menstrual reutilizables</p>
+
+
+
+        <div id="container">
+
+            <div id="per">
+                <div class="periodo">
+                    <h1 class="tlt">¿Cuántos días <u>dura tu período</u> en promedio?</h1>
+                    <div class="odo">
+                        <div>
+                            <h2>Dias de período</h2>
+                            <div id="as">
+                                <button onclick="increment('DiasPeriodo')"><i class="bi bi-plus-lg"></i></button>
+                                <input id="DiasPeriodo" type=number min=0 max=50>
+                                <button onclick="decrement('DiasPeriodo')"><i class="bi bi-dash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="odo">
+                    <div class="periodo">
+                        <h1 class="tlt"><img src="../assets/toallita-calculadora.png" width="60" height="70"> ¿Cuántas
+                            <u>toallitas</u> usas
+                            por
+                            día?
+                        </h1>
+                        <div>
+                            <div>
+                                <div class="btn">
+                                    <button onclick="increment('Toallitas')"><i class="bi bi-plus-lg"></i></button>
+                                    <input id="Toallitas" type=number min=0 max=50>
+                                    <button onclick="decrement('Toallitas')"><i class="bi bi-dash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="periodo2">
+                        <h1 class="tlt"><img src="../assets/tampon.calculadora.png" width="50" height="75">¿Cuántos
+                            <u>tampones</u> usas por
+                            día?
+                        </h1>
+                        <div>
+                            <div>
+                                <div class="btn">
+                                    <button onclick="increment('Tampones')"><i class="bi bi-plus-lg"></i></button>
+                                    <input id="Tampones" type=number min=0 max=50>
+                                    <button onclick="decrement('Tampones')"><i class="bi bi-dash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Boton  -->
+        <div id="impactContainer">
+            <div id="impact">
+                <button onclick="mostrarResultados()">Calcula tu impacto</button>
+            </div>
+        </div>
+
+        <!-- Sección de los resultados de la calculadora -->
+
+        <div id="results">
+
+            <div class="HuHidric">
+                <div class="contentIcon">
+                    <h1>Huella Hidrica</h1>
+
+                    <div class="iconSection">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.1 108.45">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                        }
+
+                                        .cls-1,
+                                        .cls-2 {
+                                            stroke: #000;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 0.5px;
+                                        }
+
+                                        .cls-2 {
+                                            fill: #4d4d4d;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>Huella Hidrica</title>
+                                <g id="Capa_2" data-name="Capa 2">
+                                    <g id="Diseno">
+                                        <rect class="cls-1" x="52.81" y="4.58" width="6.58" height="14.3" />
+                                        <polygon class="cls-2"
+                                            points="59.93 4.6 76.92 4.6 76.92 0.25 34.84 0.25 34.84 4.6 52.27 4.6 59.93 4.6" />
+                                        <path class="cls-1"
+                                            d="M20.25,98.45c.36-7.18-6.77-20.48-8.64-23.83C9.78,77.62,3.25,89,3,98.49a10.07,10.07,0,0,0,2.53,7.38,8.18,8.18,0,0,0,6.09,2.33C18.71,108.2,20.07,102.09,20.25,98.45Z" />
+                                        <path class="cls-2"
+                                            d="M94.85,30.82a4.4,4.4,0,0,0-4.39-4.39H78.75a.5.5,0,0,1-.13,0,.53.53,0,0,1-.12,0,.52.52,0,0,1-.48-.31,12.71,12.71,0,0,0-11.44-7.25H45.17a12.7,12.7,0,0,0-11.44,7.26.52.52,0,0,1-.58.28l-.1,0H23.51c-8,.44-14.18,3-18.2,7.49A21.31,21.31,0,0,0,.26,48v9a5.87,5.87,0,0,0,5.86,5.86h9.39a5.87,5.87,0,0,0,5.86-5.86V50.77a3.25,3.25,0,0,1,3.24-3.24h8.86a.35.35,0,0,1,.11,0,.51.51,0,0,1,.59.25,12.68,12.68,0,0,0,11,6.4H66.58a12.67,12.67,0,0,0,11-6.4.53.53,0,0,1,.61-.25.58.58,0,0,1,.14,0H90.46a4.39,4.39,0,0,0,4.39-4.38Z" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="asd">
+                <div id="toall">
+                    <span><img src="../assets/toalla-tampon.svg" width="80" height="80"></span>
+                    <h2 id="huhiResultado">0</h2>
+                    <h3>Agua consumida en litros</h3>
+                </div>
+
+                <div class="vsMiddle">
+                    <h4>VS.</h4>
+                </div>
+
+                <div class="copita">
+                    <span><img src="../assets/copa2-calculadora.svg" width="80" height="80"></span>
+                    </span>
+                    <h2 id="huhiCoResultado">0</h2>
+                    <h3>Agua consumida en litros</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div Class="HuCarbono">
+        <div class="contentIcon">
+            <h1>Huella de Carbono</h1>
+
+            <div class="iconSection">
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.15 117.45">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #4d4d4d;
+                                }
+
+                                .cls-1,
+                                .cls-2 {
+                                    stroke: #000;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.5px;
+                                }
+
+                                .cls-2 {
+                                    fill: #999;
+                                }
+                            </style>
+                        </defs>
+                        <title>Huella de Carbono</title>
+                        <g id="Capa_2" data-name="Capa 2">
+                            <g id="Diseno">
+                                <path class="cls-1"
+                                    d="M4.64,89.08c4.07-8.47,8.28-17.23,1.74-30.57S-.29,35.46,6,28.87c6.51-6.82,18.84-4.74,26.52,1.09h0c14.2,10.78,9.4,20.24,3.84,31.2-2.53,5-5.14,10.14-6.36,16S28.15,88.5,27.58,93.37c-1,8.62-1.8,15.43-5.06,19.46a11.35,11.35,0,0,1-9,4.37,12.27,12.27,0,0,1-2.23-.21,13.26,13.26,0,0,1-10.2-8.61C-1.23,101.31,1.62,95.37,4.64,89.08Z" />
+                                <path class="cls-2"
+                                    d="M9.85,20C.51,21.58-3,3.45,5.72.59,15.62-2.66,20,18.27,9.85,20Z" />
+                                <path class="cls-2"
+                                    d="M22.55,20.06C15.46,20.06,17,5.68,24,6.72,30.36,7.67,28.81,20.06,22.55,20.06Z" />
+                                <path class="cls-2"
+                                    d="M32.18,24.11c-6.7,0-3.46-13.29,2.92-11.35C40.63,14.44,37.21,24.11,32.18,24.11Z" />
+                                <path class="cls-2"
+                                    d="M39,28.81c-5.26,0-2-8.59,2.24-8.56C46.57,20.27,43.25,28.81,39,28.81Z" />
+                                <path class="cls-2"
+                                    d="M42.07,29.87c2.9-3.95,8,.25,4.83,3.95C44,37.22,39.41,33.48,42.07,29.87Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="asd">
+        <div id="toall">
+            <span><img src="../assets/toalla-tampon.svg" width="80" height="80"></span>
+            <h2 id="huCarResultado">0</h2>
+            <h3>KgCo2</h3>
+        </div>
+
+        <div class="vsMiddle">
+            <h4>VS.</h4>
+        </div>
+
+        <div class="copita">
+            <span><span><img src="../assets/copa2-calculadora.svg" width="80" height="80"></span>
+            </span>
+            <h2 id="huCarCoresultado">0</h2>
+            <h3>KgCo2</h3>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <hr>
+
+    <div Class="DinInver">
+        <div class="contentIcon">
+            <h1>Dinero Invertido</h1>
+
+            <div class="iconSection">
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.34 87.51">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #999;
+                                    stroke: #000;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.5px;
+                                }
+                            </style>
+                        </defs>
+                        <title>Dinero Invertido</title>
+                        <g id="Capa_2" data-name="Capa 2">
+                            <g id="Diseno">
+                                <path class="cls-1"
+                                    d="M18.35,82A5.23,5.23,0,1,0,28.8,82V79a20.53,20.53,0,0,0,0-39.79V19.54A28.83,28.83,0,0,1,38,25.77a5.55,5.55,0,0,0,7.44.2,5.33,5.33,0,0,0,.2-7.43c-.81-1-7.84-7.84-16.68-9.85V5.47a5.23,5.23,0,0,0-10.45,0V8.69a20.4,20.4,0,0,0,0,39.38V67.36a37.37,37.37,0,0,1-9-7.43,5.35,5.35,0,0,0-7.44-.6,5.34,5.34,0,0,0-.6,7.43c1,1,8,9.24,17.08,11.86L18.35,82ZM33.82,58.92a9.9,9.9,0,0,1-5,8.65V50.08A10.75,10.75,0,0,1,33.82,58.92ZM13.73,28.38a9.88,9.88,0,0,1,4.62-8.44V36.82A9.63,9.63,0,0,1,13.73,28.38Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="asd">
+        <div id="toall">
+            <span><img src="../assets/toalla-tampon.svg" width="80" height="80"></span>
+            <h2 id="pesosResultado">0</h2>
+            <h3>Pesos Argentinos $</h3>
+        </div>
+
+        <div class="vsMiddle">
+            <h4>VS.</h4>
+        </div>
+
+        <div class="copita">
+            <span><span><img src="../assets/copa2-calculadora.svg" width="80" height="80"></span>
+            </span>
+            <h2 id="precioCoresultado">0</h2>
+            <h3>Pesos Argentinos</h3>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <hr>
+
+    <div Class="CantProduc">
+        <div class="contentIcon">
+            <h1>Cantidad de productos</h1>
+
+            <div class="iconSection">
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.06 46.04">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #999;
+                                    stroke: #000;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.5px;
+                                }
+                            </style>
+                        </defs>
+                        <title>Igual</title>
+                        <g id="Capa_2" data-name="Capa 2">
+                            <g id="Diseno">
+                                <path class="cls-1" d="M69.81.25V17.64H.25V.25ZM.25,45.79H69.81V28.4H.25Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="asd">
+        <div id="toall">
+            <span><img src="../assets/toalla-tampon.svg" width="80" height="80"></span>
+            <h2 id="unidadToallresultado">0</h2>
+            <h3>Unidades</h3>
+        </div>
+
+        <div class="vsMiddle">
+            <h4>VS.</h4>
+        </div>
+
+        <div class="copita">
+            <span><span><img src="../assets/copa2-calculadora.svg" width="80" height="80"></span>
+            </span>
+            <h2 id="unidadCoresultado">0</h2>
+            <h3>Unidad</h3>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <hr>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js"
+        integrity="sha384-kpp2NheTcGXAm7Y7eo3PXi2z0Vw5NZaHMNIQxs2pGtV60iagT5pwLqM5mC35gd0L"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
